@@ -21,8 +21,10 @@ namespace EchoServer
             using (StreamReader sr = new StreamReader(ns))
             using (StreamWriter sw = new StreamWriter(ns))
             {
-                String line = sr.ReadLine();
-                sw.WriteLine();
+                String inLine = sr.ReadLine();
+                Console.WriteLine("Server modtaget: "+inLine);
+
+                sw.WriteLine(inLine);
                 sw.Flush();
             }
 

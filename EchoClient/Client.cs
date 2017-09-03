@@ -18,10 +18,12 @@ namespace EchoClient
             using (StreamReader sr = new StreamReader(ns))
             using (StreamWriter sw = new StreamWriter(ns))
             {
-                sw.WriteLine("Anders");
+                String sendStr = "Anders";
+                sw.WriteLine(sendStr);
                 sw.Flush();
-                String line = sr.ReadLine();
-                Console.WriteLine(line);
+
+                String incommingStr = sr.ReadLine();
+                Console.WriteLine("Ekko modtaget: "+incommingStr);
             }
 
         }

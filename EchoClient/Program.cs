@@ -12,6 +12,8 @@ namespace EchoClient
         {
             Client client = new Client();
             client.Start();
+
+            Console.ReadLine();
         }
     }
 }
