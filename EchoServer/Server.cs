@@ -22,9 +22,14 @@ namespace EchoServer
             using (StreamWriter sw = new StreamWriter(ns))
             {
                 String inLine = sr.ReadLine();
-                Console.WriteLine("Server modtaget: "+inLine);
-
                 sw.WriteLine(inLine);
+
+
+                int countWords = inLine.Split(' ').Length;
+
+
+                Console.WriteLine("Besked fra client modtaget: " + inLine+" Antal ord modtaget: "+countWords);
+
                 sw.Flush();
             }
 
